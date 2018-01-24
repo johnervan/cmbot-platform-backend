@@ -18,6 +18,7 @@ const Users = sequelize.define('users', {
   id: {
     primaryKey: true,
     type: Sequelize.INTEGER,
+    autoIncrement: true,
   },
   telegram_id: {
     type: Sequelize.BIGINT,

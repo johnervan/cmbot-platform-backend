@@ -22,6 +22,7 @@ const Occurrences = sequelize.define('occurrences', {
   id: {
     primaryKey: true,
     type: Sequelize.INTEGER,
+    autoIncrement: true,
   },
   event_id: {
     type: Sequelize.INTEGER,
