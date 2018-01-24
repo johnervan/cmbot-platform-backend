@@ -22,11 +22,11 @@ router.get('/', function(req, res, next) {
 router.post('/subscriber', function(req, res, next) {
   const newSubscriberObj = req.body;
   console.log("Received new subscriber request: " + JSON.stringify(newSubscriberObj));
-  users.remove(newSubscriberObj).then(result => {
+  users.subscribe(newSubscriberObj).then(result => {
     console.log("Successefully subscribed user");
     res.status(200).send('New Subscriber Request Received');
   }).catch(err => {
-    var error_message = "Error when subscribing user";
+    var error_message = "Error when subscribing user!";
     console.log(error_message);
     res.status(500).send(error_message);
   });
@@ -41,11 +41,11 @@ router.delete('/subscriber', function(req, res, next) {
   const idToDelete = req.query.id;
   if (idToDelete) {
     console.log("Received unsubscribe request for id: " + idToDelete);
-    users.delete(idToDelete).then(result => {
+    users.remove(idToDelete).then(result => {
       console.log("Successefully deleted user");
       res.status(200).send('Unsubscribe Request Received');
     }).catch(err => {
-      var error_message = "Error when deleting user";
+      var error_message = "Error when deleting user!";
       console.log(error_message);
       res.status(500).send(error_message);
     });
