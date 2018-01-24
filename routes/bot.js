@@ -1,6 +1,8 @@
 /* Routes to handle API calls between platform and tg bot
 *   Endpoints:
-*     1. POST /subscribe => Add new subscriber
+*     1. GET /subscriber => Get list of subscribers
+*     2. POST /subscriber => Add new subscriber
+*     3. DELETE /subscriber => Delete subscriber
 */
 
 var express = require('express');
@@ -12,6 +14,16 @@ const users = require('../libs/functions/users');
 router.get('/', function(req, res, next) {
   res.status(200).send('All Good');
 });
+
+/* GET list of subscribers.
+* return: {
+*   subscriber_list: [{telegram_name: <INTEGER>, telgram_name: <STRING}, ...]
+* }
+*/
+router.get('/subscriber', function(req, res, next) {
+  //TODO: Get list of subscribers from persistence
+  res.status(200).send("Endpoint under development...")
+})
 
 /* POST new subscriber.
 * body: {
