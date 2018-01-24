@@ -18,6 +18,7 @@ const Events = sequelize.define('events', {
   id: {
     primaryKey: true,
     type: Sequelize.INTEGER,
+    autoIncrement: true,
   },
   event_name: {
     type: Sequelize.CHAR,
