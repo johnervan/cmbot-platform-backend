@@ -1,3 +1,5 @@
+const is = require('is_js');
+
 const {
   Users
 } = require('../../models/users');
@@ -13,6 +15,7 @@ const {
 
 const SUBSCRIBE_ACTION = 'action="subscribeUser"';
 const DELETE_ACTION = 'action="deleteUser"';
+const GET_SUBSCRIBER_LIST_ACTION = 'action="getSubscriberList"';
 
 /**
  * Creates instance in users table
@@ -64,7 +67,32 @@ function remove(idToDelete) {
   });
 }
 
+/**
+ * Returns list of telegram_id
+ *
+ */
+function getSubscriberList() {
+  return new Promise((resolve, reject) => {
+    console.log(`${GET_SUBSCRIBER_LIST_ACTION}`);
+    Users.findAll({
+      attributes: ['telegram_id']
+    }).then((result) => {
+      console.log(`${GET_SUBSCRIBER_LIST_ACTION}
+        telegram_id_list="${JSON.stringify(result)}"`);
+      if (is.null(result)) {
+        reject(new NotFoundError('no subscribers found'));
+      } else {
+        resolve(result);
+      }
+    }).catch((err) => {
+      console.log(`${GET_SUBSCRIBER_LIST_ACTION} error="${err}"`);
+      reject(new GeneralError());
+    });
+  });
+}
+
 module.exports = {
   subscribe,
   remove,
+  getSubscriberList
 };
