@@ -40,7 +40,7 @@ function getUpcoming(startDate, endDate) {
       result = formatUpcomingEvents(result);
       resolve(result);
     }).catch((err) => {
-      console.log(`${GET_SUBSCRIBER_LIST_ACTION} error="${err}"`);
+      console.log(`${GET_UPCOMING_ACTION} error="${err}"`);
       reject(new GeneralError());
     });
   });
