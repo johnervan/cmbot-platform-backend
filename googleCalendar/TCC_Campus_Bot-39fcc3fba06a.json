@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tcc-campus-bot",
+  "private_key_id": "39fcc3fba06a4c2e2d079e4ecc8111d3693003b2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCt+pYKSd1ErqEY\n/MUgwl0qde2qEqy/yus/OmAEhqhAg6QvYFaY+6upfSn32hl/bJZPAf22eCdP3nDw\nrM63BGEpd2hLI9523/0j2W9C9WUrRyMFAw/P6SdwDg6fGgnTAM2qROmmQgftsTwm\nT6/hd9LEUt9opH21ar+hUKamovOiomGARBUgX2P9jQAqPBh+pBxXOToMBBlfPwzv\nN1YNgcb1/LaZlnY0nSD1gDXtp/6kK7jK5YcZEl6I/2UXC6KzwXyY6RxAztlaq4vY\nv9M/74QixruSfNuikQqQMQURKAL6GnNdcjCtqkte5fiv6XZK02rDgXPm6DLI36fC\nguFMbCIDAgMBAAECggEAUT34jZJjiJyRbtUuincowVizZF13HNK5mtt8FfD5pbKz\nW0o99g9j4HApxmsqx/WhlQBlhS1DkkjZ7ZGMsCsT4iS354q26kT7dR+mlJp6JUUB\nRehhnGGQgIOX8VTb7JPt9kpa3z/rauP+JhfFFmD5Y6MdX0SczTgthztdrufeJH2v\nxM2hOwuhWro72zG4+Ljp9xy4m+8PQy2fjQQFHuCXKovBjzO65+5qtCCIdanBFZNV\nxv1VKQJVSP1IyUg0ugZ1fIUjbsURQH/fTh5w+o/XroZegUdDeQcv4lgY1l52NrV0\npcRrGsbYdA0nOuWH0sYZZdeWkTy6OMzNXwJ1alE6XQKBgQDuNPyFFPiiSsWfXBMC\njul349ARmtFPRFLicoNi8Bk/X6biyHqi9aOdzhiFOQ+Rz0ZLyS+4qStAQel0vKZi\n6VsLvvGKvQTUxh9RPbS9t23lADiwMKzgZutEdaTWSaDslHzy71s0RWDlKBIGZuO+\nKcA5e1Mc9tsNT6BNddAkKQ+t/QKBgQC6+WyT6GDI6hZ8XEPxyp9lVQK2pZdthd3V\nr2lLacAPrEtPyHtdotnJZiyoRqj5K17iK0vPv2EXQ9swVBjAK+BpX41B3zLCwUy+\ndKqiWtBPRl+kq6YGOwka/fXNdv2YNFbm3MraPAcSISYjnRJ+utVujnXMgX8NvvQK\na0hCucwP/wKBgQCxzyuPy4+s1VOfGQO3rSXpMExoV8BWAxI7pm8cs0ylWakhL7Ub\nX3C6otT63RUaKja2636LwPtgA9NYKFmrC7XCls2GWoH4scs+wWjhFMMbZYbrPepN\nt4V2nLpmmp9c+ZorXTAfXIpvg/Gwha0Kje/G+J+Zx0rMLNvj9kVgOKZToQKBgQCi\nparwF2tqG0goMlLgmPSDv6m2nOHXYmYRJqAf/AQZHjX9V1cJo0p0yi76y0zeQ/4s\nHKG8PK0HAf5AUkedlA2JXJeSv8h2ZpSN8QsmZH1lGMDGjJLGRMCs/FLAw0vjBVS7\nS0IjCajU+oUk4dRe7cQQgliy58tQd9Xu4lhfwyRinQKBgBOvY88VgBHhDXfJlNP5\nwXZ66USYP4SL4yBHWAx+WDl0PQI1PXz4QHywmKq4LHo8wQGEaWIowLmE5u46B02A\njBt3Ny01AhAhRzOZ3KnH4oPXY1PDakYaOgW7+M+pNqX+CdIZhYKVl8S+9q1l6Ivl\nHVcShA1cC5rZISyG0T8Wyp5u\n-----END PRIVATE KEY-----\n",
+  "client_email": "developer@tcc-campus-bot.iam.gserviceaccount.com",
+  "client_id": "110702809278806867155",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/developer%40tcc-campus-bot.iam.gserviceaccount.com"
+}
