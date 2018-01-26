@@ -1,14 +1,13 @@
 const config = require('./config/settings');
 const CalendarAPI = require('node-google-calendar');
-const cal = new CalendarAPI(config);
-const calendarIdList = config.calendarId;
-const calendarId = calendarIdList['primary'];
 
 // Sample Execution
-/*listSingleEventsWithinDateRange("2018-01-01T00:00:00+08:00",
-"2018-12-01T00:00:00+08:00");*/
+// listSingleEventsWithinDateRange("2018-01-01T00:00:00+08:00","2018-12-01T00:00:00+08:00");
 
 function listSingleEventsWithinDateRange(startDateTime, endDateTime) {
+  const cal = new CalendarAPI(config);
+  const calendarIdList = config.calendarId;
+  const calendarId = calendarIdList['primary'];
   let eventsArray = [];
 	let params = {
 		timeMin: startDateTime,
@@ -34,6 +33,7 @@ function listSingleEventsWithinDateRange(startDateTime, endDateTime) {
   			console.log(eventsArray);
   			resolve(eventsArray);
   		}).catch(err => {
+        console.log(err);
   			reject('Error: listSingleEventsWithinDateRange', err.message);
   		});
   });

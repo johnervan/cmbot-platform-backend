@@ -9,6 +9,8 @@ var express = require('express');
 var router = express.Router();
 
 const users = require('../libs/functions/users');
+const gCal = require('../googleCalendar/events');
+const dateUtil = require('../libs/utils/dateTimeUtils');
 
 /* GET response from bot api endpoint. */
 router.get('/', function(req, res, next) {
@@ -66,5 +68,23 @@ router.delete('/subscriber', function(req, res, next) {
     res.status(400).send("No id found in query string");
   }
 })
+
+router.get('/upcoming', function(req, res, next) {
+  const startDateTime = dateUtil.formatDateForGoogleCal(req.query.start_date);
+  const endDateTime = dateUtil.formatDateForGoogleCal(req.query.end_date);
+  if (startDateTime && endDateTime) {
+    console.log(`Request Start DateTime: ${startDateTime}, End DateTime: ${endDateTime}`)
+    gCal.listSingleEventsWithinDateRange(startDateTime, endDateTime).then((result) => {
+      res.status(200).json(result)
+    }).catch((err) => {
+      console.log(err);
+      res.status(500).send(err);
+    });
+  } else {
+    console.log("Error: No start/end datetime found or invalid datetime in query string");
+    res.status(400).send("No start/end datetime or invalid datetime found in query string");
+  }
+})
+
 
 module.exports = router;
