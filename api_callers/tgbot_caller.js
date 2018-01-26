@@ -19,9 +19,9 @@ function postEventNotification(occurenceObj) {
         headers: {'content-type': 'application/json' },
         body: {
           event_name: occurenceObj.event_name,
-          event_message: occurenceObj.message_format,
-          date: occurenceObj.date,
-          time: occurenceObj.time,
+          event_message: occurenceObj.event_message,
+          date_time: occurenceObj.date_time,
+          location: occurenceObj.location,
           subscriber_list: subscriberList,
         },
         json: true,
