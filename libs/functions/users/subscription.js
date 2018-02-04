@@ -82,7 +82,11 @@ function getSubscriberList() {
       if (is.null(result)) {
         reject(new NotFoundError('no subscribers found'));
       } else {
-        resolve(result);
+        const subscriberList = [];
+        for (var i=0; i<result.length; i++) {
+          subscriberList.push(result[i].telegram_id);
+        }
+        resolve(subscriberList);
       }
     }).catch((err) => {
       console.log(`${GET_SUBSCRIBER_LIST_ACTION} error="${err}"`);
