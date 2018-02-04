@@ -9,7 +9,7 @@ var express = require('express');
 var router = express.Router();
 
 const users = require('../libs/functions/users');
-const gCal = require('../googleCalendar/events');
+const gCal = require('../libs/googleCalendar/events');
 const dateUtil = require('../libs/utils/dateTimeUtils');
 
 /* GET response from bot api endpoint. */
