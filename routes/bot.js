@@ -19,12 +19,17 @@ router.get('/', function(req, res, next) {
 
 /* GET list of subscribers.
 * return: {
-*   subscriber_list: [{telegram_name: <INTEGER>, telgram_name: <STRING}, ...]
+*   subscriber_list: [{telegram_id: <INTEGER>, telgram_name: <STRING}, ...]
 * }
 */
 router.get('/subscriber', function(req, res, next) {
-  //TODO: Get list of subscribers from persistence
-  res.status(200).send("Endpoint under development...")
+  users.getSubscriberList().then((subscriberList) => {
+    console.log("Sending list of subscribers...");
+    res.status(200).json(subscriberList);
+  }).catch((err) => {
+    const error_message = "Error when getting list of subscribers."
+    res.status(500).send(error_message);
+  })
 })
 
 /* POST new subscriber.
@@ -69,6 +74,13 @@ router.delete('/subscriber', function(req, res, next) {
   }
 })
 
+/* GET upcoming events in daterange.
+* query_string: {
+*   start_date: <STRING> "YYYY-MM-DD"
+*   end_date: <STRING> "YYYY-MM-DD"
+*   }
+* return: [{event_obj}, ...]
+*/
 router.get('/upcoming', function(req, res, next) {
   const startDateTime = dateUtil.formatDateForGoogleCal(req.query.start_date);
   const endDateTime = dateUtil.formatDateForGoogleCal(req.query.end_date);
@@ -85,6 +97,5 @@ router.get('/upcoming', function(req, res, next) {
     res.status(400).send("No start/end datetime or invalid datetime found in query string");
   }
 })
-
 
 module.exports = router;
