@@ -16,7 +16,7 @@ Telegram Bot Platform for TCC Campus Ministry Bot
 5. **Heroku CLI**
     > Optional. Only required for those with permissions to push to Heroku's servers.
 
-#### Getting Started
+#### Getting Started:
 
 1. Clone this repo
    > `git clone https://github.com/tcc-campus/cmbot-platform-backend.git`
